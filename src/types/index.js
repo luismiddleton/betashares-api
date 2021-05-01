@@ -9,7 +9,17 @@ const HeaderTypes = {
   WEIGHT: 'weight',
   UNITS: 'units',
   MARKET_VALUE: 'marketValue',
-  NOTIONAL_VALUE: 'notionalValue'
+  NOTIONAL_VALUE: 'notionalValue',
+  NAV: 'nav',
+  DATE: 'date',
+  DISTRIBUTION: 'distribution',
+  TOTAL_FUND_RETURN: 'totalFundReturn',
+  FUND: 'fund'
+};
+
+const PathTypes = {
+  HOLDING: 'holdings',
+  NAV: 'nav'
 };
 
 const EnvironmentTypes = {
@@ -22,4 +32,4 @@ const MorganTypes = {
   COMMON: 'common'
 };
 
-module.exports = { HeaderTypes, EnvironmentTypes, MorganTypes };
+module.exports = { HeaderTypes, EnvironmentTypes, MorganTypes, PathTypes };

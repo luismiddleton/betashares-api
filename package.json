@@ -13,8 +13,8 @@
     "verbose": true
   },
   "scripts": {
-    "start": "nodemon index.js",
-    "start:prod": "cross-env NODE_ENV=production node index.js",
+    "start": "nodemon src/index.js",
+    "start:prod": "cross-env NODE_ENV=production node src/index.js",
     "test": "jest",
     "prettier:check": "prettier --config -c .",
     "prettier": "prettier --config -w ."

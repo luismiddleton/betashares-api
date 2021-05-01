@@ -5,7 +5,7 @@ const mockPayload = require('../utils/mocks');
 const app = express();
 
 describe('GET /holding/:ticker', () => {
-  app.get('/holding/MOCK', (req, res) => {
+  app.get('/holding/MOCK', (_, res) => {
     res.status(200).json({ ...mockPayload });
   });
 

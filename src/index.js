@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const logger = require('./utils/logger');
 const router = require('./router');
-const isProduction = require('./utils/environment');
 
 const app = express();
 const port = process.env.PORT || 3000;
