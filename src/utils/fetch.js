@@ -1,8 +1,8 @@
-const axios = require('axios');
-const baseUrl = require('../constants/domain');
-const { PathTypes } = require('../types');
+import axios from 'axios';
+import { baseUrl } from '../constants';
+import { PathTypes } from '../types';
 
-const fetchData = async (ticker, type) => {
+export const fetchData = async (ticker, type) => {
   if (!ticker) return;
 
   let path;
@@ -25,5 +25,3 @@ const fetchData = async (ticker, type) => {
   const { data } = await axios.get(path);
   return data;
 };
-
-module.exports = fetchData;

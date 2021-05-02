@@ -1,4 +1,4 @@
-const HeaderTypes = {
+export const HeaderTypes = {
   TICKER: 'ticker',
   SEDOL: 'sedol',
   NAME: 'name',
@@ -17,19 +17,17 @@ const HeaderTypes = {
   FUND: 'fund'
 };
 
-const PathTypes = {
+export const PathTypes = {
   HOLDING: 'holdings',
   NAV: 'nav'
 };
 
-const EnvironmentTypes = {
+export const EnvironmentTypes = {
   PRODUCTION: 'production',
   TEST: 'test'
 };
 
-const MorganTypes = {
+export const MorganTypes = {
   DEV: 'dev',
   COMMON: 'common'
 };
-
-module.exports = { HeaderTypes, EnvironmentTypes, MorganTypes, PathTypes };

@@ -1,7 +1,7 @@
-const csv = require('csvtojson');
-const nonApplicables = require('../constants/values');
+import csv from 'csvtojson';
+import { nonApplicables } from '../constants';
 
-const scrubResult = async (data, opts = {}) => {
+export const scrubResult = async (data, opts = {}) => {
   if (!data) return;
 
   const arr = await csv(opts).fromString(data);
@@ -12,5 +12,3 @@ const scrubResult = async (data, opts = {}) => {
 
   return result;
 };
-
-module.exports = scrubResult;

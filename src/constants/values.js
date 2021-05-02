@@ -1,4 +1,4 @@
-const nonApplicables = [
+export const nonApplicables = [
   'Fund Name',
   'Fund',
   '',
@@ -9,5 +9,3 @@ const nonApplicables = [
   'Ticker',
   "its timeliness, the information's use or any other matter."
 ];
-
-module.exports = nonApplicables;

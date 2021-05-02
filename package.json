@@ -13,13 +13,17 @@
     "verbose": true
   },
   "scripts": {
-    "start": "nodemon src/index.js",
-    "start:prod": "cross-env NODE_ENV=production node src/index.js",
+    "babel-node": "babel-node --presets='@babel/preset-env' --ignore='foo|bar|baz'",
+    "clear": "rm -rf ./dist",
+    "start": "nodemon --exec npm run babel-node -- ./src/index.js",
+    "start:prod": "cross-env NODE_ENV=production node ./dist/main.js",
+    "build": "webpack",
     "test": "jest",
     "prettier:check": "prettier --config -c .",
     "prettier": "prettier --config -w ."
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "axios": "^0.20.0",
     "cors": "^2.8.5",
     "cross-env": "^7.0.2",
@@ -29,11 +33,18 @@
     "nodemon": "^2.0.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.14.0",
+    "babel-loader": "^8.2.2",
     "husky": "^4.3.0",
     "jest": "^26.5.2",
     "prettier": "^2.1.2",
     "prettierrc": "^0.0.0-5",
     "pretty-quick": "^3.0.2",
-    "supertest": "^5.0.0"
+    "supertest": "^5.0.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-node-externals": "^3.0.0"
   }
 }

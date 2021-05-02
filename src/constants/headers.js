@@ -1,6 +1,6 @@
-const { HeaderTypes, PathTypes } = require('../types');
+import { HeaderTypes, PathTypes } from '../types';
 
-const Headers = {
+export const Headers = {
   [PathTypes.HOLDING]: [
     HeaderTypes.TICKER,
     HeaderTypes.SEDOL,
@@ -22,5 +22,3 @@ const Headers = {
     HeaderTypes.TOTAL_FUND_RETURN
   ]
 };
-
-module.exports = Headers;

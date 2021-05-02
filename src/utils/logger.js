@@ -1,9 +1,7 @@
-const morgan = require('morgan');
-const { MorganTypes } = require('../types');
-const isProduction = require('./environment');
+import morgan from 'morgan';
+import { MorganTypes } from '../types';
+import { isProduction } from './environment';
 
 const { COMMON, DEV } = MorganTypes;
 
-const logger = isProduction ? morgan(COMMON) : morgan(DEV);
-
-module.exports = logger;
+export const logger = isProduction ? morgan(COMMON) : morgan(DEV);

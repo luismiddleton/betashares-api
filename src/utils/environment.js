@@ -1,5 +1,4 @@
-const { EnvironmentTypes } = require('../types');
+import { EnvironmentTypes } from '../types';
 
-const isProduction = process.env.NODE_ENV === EnvironmentTypes.PRODUCTION;
-
-module.exports = isProduction;
+export const isProduction =
+  process.env.NODE_ENV === EnvironmentTypes.PRODUCTION;

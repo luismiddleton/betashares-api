@@ -1,7 +1,7 @@
-const express = require('express');
-const cors = require('cors');
-const logger = require('./utils/logger');
-const router = require('./router');
+import express from 'express';
+import cors from 'cors';
+import { logger } from './utils';
+import router from './router';
 
 const app = express();
 const port = process.env.PORT || 3000;
